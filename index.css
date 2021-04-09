@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+}
+
+/* Create two equal columns that sits next to each other */
+.column1 {
+  flex: 30%;
+  padding: 10px;
+}
+.column2 {
+  flex: 5%;
+  padding: 10px;
+}
+.column3 {
+  flex: 65%;
+  padding: 5px;
+}
+
+.verticalline {
+  border-left: 1px dashed gray;
+  height: 500px;
+}
+.horizontalline {
+  border-top: 1px dashed gray;
+}

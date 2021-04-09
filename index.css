@@ -10,6 +10,7 @@
 .column1 {
   flex: 30%;
   padding: 10px;
+  font-size: 13px;
 }
 .column2 {
   flex: 5%;

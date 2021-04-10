@@ -13,7 +13,7 @@ with open(f'base{slash}index-struct.html', 'r') as f:
     html_base_file = f.read()
 
 blogs = os.listdir(blogs_folder)
-sorted(blogs, key= lambda blog: blog.split('.')[0])
+blogs = sorted(blogs, key= lambda blog: blog.split('.')[0], reverse = True)
 blog_txts = ''
 for blog in blogs:
     print(blog)
@@ -26,7 +26,7 @@ for blog in blogs:
 
 html_base_file = html_base_file.replace('<!-- [] -->', f"{blog_txts}")
     
-instr = input('File index.html is going to be replaced, are you sure?[yN]')
+instr = input('File index.html is going to be replaced, are you sure?[yN] ')
 if instr != 'y':
     print('index.html is intact.')
     sys.exit()

@@ -15,12 +15,19 @@
   padding: 5px;
 }
 
-.verticalline {
-  border-left: 1px dashed black;
-  height: 100%;
+.tophorizontalline {
+  border-top: 1px solid black;
+  opacity: 0.6;
 }
 .horizontalline {
-  border-top: 1px dashed black;
+  border-top: 3px solid black;
+  opacity: 0.1;
+  width: 50%;
+}
+.verticalline {
+  border-left: 1px solid black;
+  height: 100%;
+  opacity: 0.3;
 }
 .time {
   padding: 8px;

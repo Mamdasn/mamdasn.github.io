@@ -1,6 +1,7 @@
 import os
-import platform
 import sys
+import time
+import platform
 
 slash = '/' if platform.system() == 'Linux' else '\\'
 blogs_folder = 'blogs-by-topics'
@@ -17,8 +18,9 @@ blog_txts = ''
 for blog in blogs:
     print(blog)
     with open(f"{blogs_folder}{slash}{blog}", 'r') as f:
+        modified_date=time.strftime('%a %H:%M %B %d, %Y', time.localtime(os.path.getmtime(f"{blogs_folder}{slash}{blog}")))
         blog_txt = f"{f.read()}\n \
-                      <br>\n \
+                      <div class='time'>{modified_date}</div>\n \
                       <div class='horizontalline'></div>"
         blog_txts = f"{blog_txts}\n{blog_txt}"
 

@@ -33,3 +33,12 @@ else:
 with open('index.html', 'w') as f:
     f.write(html_base_file)
 print('Done.')
+
+# for blog in blogs:
+#     with open(f"{blogs_folder}{slash}{blog}", 'r') as f:
+#         lines = f.readlines()
+#         blog_txt = ''
+#         for line in lines:
+#             line = f"<p>{line.strip()}</p>" if line.strip() else '<br>'
+#             blog_txt = f"{blog_txt}\n{line}"
+#         print(blog_txt)

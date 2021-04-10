@@ -13,7 +13,7 @@ with open(f'base{slash}index-struct.html', 'r') as f:
     html_base_file = f.read()
 
 blogs = os.listdir(blogs_folder)
-blogs = sorted(blogs, key= lambda blog: blog.split('.')[0], reverse = True)
+blogs = sorted(blogs, key= lambda blog: blog.split('.')[0], reverse= True)
 blog_txts = ''
 for blog in blogs:
     print(blog)

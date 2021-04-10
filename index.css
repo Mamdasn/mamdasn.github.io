@@ -1,7 +1,6 @@
 .row {
   display: flex;
 }
-/* Create two equal columns that sits next to each other */
 .column1 {
   flex: 20%;
   padding: 10px;

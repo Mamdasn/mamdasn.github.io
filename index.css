@@ -58,13 +58,23 @@ h5 {
   line-height: 100px;
   height: 100px;
 }
+.avatar {
+  float:right; 
+  padding: 10px; 
+  color: white; 
+  text-align: center;
+}
 
-.topic {
+.personalInfoTopic,
+.blogsTopic {
   font-size: large;
   color: white;
   opacity: 0.3;
   padding: 10px;
   text-align: center;
+}
+.personalInfoTopic {
+  padding: 0px;
 }
 
 .infoPane {

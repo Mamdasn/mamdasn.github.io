@@ -1,3 +1,7 @@
+body {
+  background-color: #181818; 
+  /* background-color: #282828;  */
+}
 .main {
   width: 50%;
   min-width: 500px;
@@ -6,65 +10,97 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-
 }
-.abstract {
+p {
+  color: white; 
+}
+
+.webpagetopic {
+  color: whitesmoke;
+  font-size: x-large;
+  font-weight: bold;
   text-align: center;
   align-items: center;
   line-height: 100px;
   height: 100px;
 }
 
-h2 {
-  position: relative;
-  /* font-family: "Source Code Pro"; */
+a:link {
+  color: teal;
+  text-decoration: none;
 }
 
-h2::before, 
-h2::after {
-  content: '';
-  max-width: max-content;
-  /* outline: 2px solid red; */
+a:visited {
+  color:#3F00FF;
+  text-decoration: none;
+}
+dl {
+  color: white;
+}
+dt {
+  color: #5D3FD3;
+}
+dd {
+  font-size: small;
 }
 
-h2::before {
-  background: teal;
+h1,
+h2,
+h3,
+h6,
+h7,
+h8 {
+  color: white;
+}
+h4 {
+  color: aquamarine;
+}
+h5 {
+  color: cornflowerblue;
 }
 
-.row {
-  display: flex;
-
-}
-.infoPane {
-  flex: 15%;
+.topic {
+  font-size: large;
+  color: white;
+  opacity: 0.3;
   padding: 10px;
-  font-size: 11px;
+  text-align: center;
 }
-.partitioner {
-  flex: 5%;
-  padding: 5px;
+
+.infoPane {
+  display: table;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 11px;
+  width: 100%;
 }
 .mainTextPane {
-  flex: 80%;
   padding: 5px;
 }
 
 .tophorizontalline {
-  border-top: 1px solid black;
-  opacity: 0.6;
+  border-top: 2px solid white;
+  opacity: 0.1;
 }
 .horizontalline {
-  border-top: 3px solid black;
+  border-top: 1px solid white;
+  opacity: 0.1;
+}
+.stylishhorizontalfulline,
+.stylishhorizontalline {
+  border-top: 3px solid white;
   opacity: 0.1;
   width: 50%;
 }
+.stylishhorizontalfulline {
+  width: 100%;
+}
 .verticalline {
-  border-left: 1px solid black;
-  height: 100%;
-  opacity: 0.3;
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
 }
 .time {
   padding: 8px;
   font-size: 13px;
   text-align: right;
+  color: darkcyan;
 }

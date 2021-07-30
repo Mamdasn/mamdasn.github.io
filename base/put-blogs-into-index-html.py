@@ -21,7 +21,7 @@ for blog in blogs:
         # modified_date=time.strftime('%a %H:%M %B %d, %Y', time.localtime(os.path.getmtime(f"{blogs_folder}{slash}{blog}")))
         blog_txt_raw  = f.readlines()
         modified_date = blog_txt_raw[-1]
-        blog_txt = f"{''.join(blog_txt_raw[:-1])}\n \
+        blog_txt = f"{'                        '.join(blog_txt_raw[:-1])}\n \
                       <div class='time'>{modified_date}</div>\n \
                       <div class='stylishhorizontalline'></div>"
         blog_txts = f"{blog_txts}\n{blog_txt}"

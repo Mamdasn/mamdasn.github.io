@@ -3,7 +3,7 @@ import sys
 import time
 import platform
 
-slash = '/' if platform.system() == 'Linux' else '\\'
+slash = '\\' if platform.system() == 'Windows' else '/'
 blogs_folder = 'blogs-by-topics'
 
 if os.getcwd().split(slash)[-1] == 'base':
@@ -27,7 +27,7 @@ for blog in blogs:
         blog_txts = f"{blog_txts}\n{blog_txt}"
 
 html_base_file = html_base_file.replace('<!-- [] -->', f"{blog_txts}")
-    
+
 instr = input('File index.html is going to be replaced, are you sure?[yN] ')
 if instr != 'y':
     print('index.html is intact.')

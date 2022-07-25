@@ -5,22 +5,23 @@ body {
 
 p {
   color: white; 
+  font-family: "Times New Roman", Times, serif;
 }
 
 a:link {
-  color: teal;
+  color: #6b4851;
   text-decoration: none;
 }
 
 a:visited {
-  color:#3F00FF;
+  color: #46634d;
   text-decoration: none;
 }
 dl {
   color: white;
 }
 dt {
-  color: #5D3FD3;
+  color: #6c7475;
   font-size: small;
 }
 dd {
@@ -36,10 +37,10 @@ h8 {
   color: white;
 }
 h4 {
-  color: aquamarine;
+  color: white;
 }
 h5 {
-  color: cornflowerblue;
+  color: white;
 }
 .main {
   width: 50%;
@@ -113,5 +114,5 @@ h5 {
   padding: 8px;
   font-size: 13px;
   text-align: right;
-  color: darkcyan;
+  color: dimgray;
 }

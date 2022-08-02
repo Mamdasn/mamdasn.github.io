@@ -1,0 +1,33 @@
+<h4>-An interesting approach to image enhancement</h4>
+<p>
+Recently, I started to write codes for image manipulation and improvement, and unfortunately I don't have a community around me. So I would appreciate if you check out my codes, give me feedback and tell me what you want me to code next.
+</p>
+
+<center>
+<video width="320" height="240" controls>
+  <source src="https://github.com/Mamdasn/mamdasn.github.io/blob/main/assets/Open-air-theater.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+</center>
+
+<p>
+Code is here: <a href="https://github.com/Mamdasn/im2dhisteq">Two Dimensional Image Contrast Enhancement</a>
+</p>
+<p>
+This module makes details more prominent and gets rid of haziness in images. I also tried it on videos and the outputs were satisfactory as well.
+</p>
+
+<p>
+Test on a video: <a href="https://youtu.be/tX1KbJ2ugdE">https://youtu.be/tX1KbJ2ugdE</a>
+</p>
+
+<center>
+<video width="320" height="240" controls>
+  <source src="https://github.com/Mamdasn/mamdasn.github.io/blob/main/assets/PMF-lapse-of-the-open-air-theater-image.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+</center>
+
+<p>
+As it is depicted in the above GIF, this module tries to utilize all available brightness range (0, 255), and by doing so, contrast between sections in the image is increased.
+</p>

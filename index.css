@@ -1,10 +1,10 @@
 body {
-  background-color: #181818; 
+  background-color: #181818;
   /* background-color: #282828;  */
 }
 
 p {
-  color: white; 
+  color: white;
   font-family: "Times New Roman", Times, serif;
 }
 
@@ -37,7 +37,7 @@ h8 {
   color: white;
 }
 h4 {
-  color: white;
+  color: #d9c693;
 }
 h5 {
   color: white;
@@ -61,9 +61,9 @@ h5 {
   height: 100px;
 }
 .avatar {
-  float:right; 
-  padding: 10px; 
-  color: white; 
+  float:right;
+  padding: 10px;
+  color: white;
   text-align: center;
 }
 

@@ -19,14 +19,10 @@ for blog in blogs:
     print(blog)
     with open(f"{blogs_folder}{slash}{blog}", 'r') as f:
         # modified_date=time.strftime('%a %H:%M %B %d, %Y', time.localtime(os.path.getmtime(f"{blogs_folder}{slash}{blog}")))
-        blog_txt_raw  = f.readlines()
-        modified_date = blog_txt_raw[-1].strip()
-        blog_txt = f"{'                        '.join(blog_txt_raw[:-1])}\n \
-                      <div class='time'>{modified_date}</div>\n \
-                      <div class='stylishhorizontalline'></div>"
+        blog_txt  = ''.join(f.readlines())
         blog_txts = f"{blog_txts}\n{blog_txt}"
 
-html_base_file = html_base_file.replace('<!-- [] -->', f"{blog_txts}")
+html_base_file = html_base_file.replace('<!-- [POSTS PLACEHOLDER] -->', f"{blog_txts}")
 
 instr = input('File index.html is going to be replaced, are you sure?[yN] ')
 if instr != 'y':

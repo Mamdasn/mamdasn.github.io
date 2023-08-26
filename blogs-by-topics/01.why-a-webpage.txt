@@ -1,9 +1,6 @@
-<h4>-Why a Webpage?</h4>
-<p>
-As of just recently I noticed that simple static webpages are more aesthetically pleasing and also highly more efficient rather than those of javascript internet chokers. Since then, I was looking for an opportunity to have my own webpage up in the internet to be able to rant on about anything I desire, but now, that there is a time to spare, I realize that there is not much left in my mind to rant on about.
-</p>
-<p>
-Moving on, on this page I am going to talk about the thoughts that occupy space in my mind the most, the things I'd like to do in the future and also my to-do lists.
-</p>
-
-Sat 14:52 April 10, 2021
+<h2 class="w3-text-light-grey"> Why am I here?</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <p>
+	Recently, I've observed that minimalist static webpages not only possess superior aesthetics but are also markedly more efficient than their JavaScript-heavy counterparts. Following this realization, I've been eager to establish my own digital space, allowing me to express myself in a new way. To be specific, I intend to share insights that captivate my curiosity, ideas that resonate during reflections in the stillness of the night, and my to-do lists.
+    </p>
+    <div class="time-tag"> Sat 14:52 April 10, 2021 </div>

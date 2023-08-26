@@ -1,118 +1,42 @@
-body {
-  background-color: #181818;
-  /* background-color: #282828;  */
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+
+.bold-text {font-weight: bold;}
+
+.w3-row-padding img {margin-bottom: 12px}
+
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background: #222;}
+
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+
+.bw {
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
 }
 
-p {
-  color: white;
-  font-family: "Times New Roman", Times, serif;
+.container {
+    display: flex;
+    justify-content: space-between;  /* Removed the extra colon */
 }
 
-a:link {
-  color: #6b4851;
-  text-decoration: none;
+.box {
+        padding: 0px;
 }
 
-a:visited {
-  color: #46634d;
-  text-decoration: none;
-}
-dl {
-  color: white;
-}
-dt {
-  color: #6c7475;
-  font-size: small;
-}
-dd {
-  font-size: small;
+.box-left {
+    margin-right: 20px;
+    width: 80%;
 }
 
-h1,
-h2,
-h3,
-h6,
-h7,
-h8 {
-  color: white;
-}
-h4 {
-  color: #d9c693;
-}
-h5 {
-  color: white;
-}
-.main {
-  width: 50%;
-  min-width: 500px;
-  max-width: 1500px;
-  /* text-align: center; */
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-.webpagetopic {
-  color: whitesmoke;
-  font-size: x-large;
-  font-weight: bold;
-  text-align: center;
-  align-items: center;
-  line-height: 100px;
-  height: 100px;
-}
-.avatar {
-  float:right;
-  padding: 10px;
-  color: white;
-  text-align: center;
+.box-right {
+    width: 20%;
 }
 
-.personalInfoTopic,
-.blogsTopic {
-  font-size: large;
-  color: white;
-  opacity: 0.3;
-  padding: 10px;
-  text-align: center;
-}
-.personalInfoTopic {
-  padding: 0px;
-}
-
-.infoPane {
-  display: table;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  font-size: 11px;
-  width: 100%;
-}
-.mainTextPane {
-  padding: 5px;
-}
-
-.tophorizontalline {
-  border-top: 2px solid white;
-  opacity: 0.1;
-}
-.horizontalline {
-  border-top: 1px solid white;
-  opacity: 0.1;
-}
-.stylishhorizontalfulline,
-.stylishhorizontalline {
-  border-top: 3px solid white;
-  opacity: 0.1;
-  width: 50%;
-}
-.stylishhorizontalfulline {
-  width: 100%;
-}
-.verticalline {
-  border-right: 1px solid rgba(255, 255, 255, 0.05);
-}
-.time {
-  padding: 8px;
+.time-tag {
   font-size: 13px;
   text-align: right;
-  color: dimgray;
 }

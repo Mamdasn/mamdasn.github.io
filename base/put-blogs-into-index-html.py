@@ -1,44 +1,45 @@
 import os
 import sys
-import time
-import platform
 
-slash = '\\' if platform.system() == 'Windows' else '/'
 blogs_folder = 'blogs-by-topics'
 
-if os.getcwd().split(slash)[-1] == 'base':
+# Check if the current directory is 'base' and if so, change to the parent directory
+if os.path.basename(os.getcwd()) == 'base':
     os.chdir('..')
 
-with open(f'base{slash}index-struct.html', 'r') as f:
+# Read the base structure of the HTML file
+with open(os.path.join('base', 'index-struct.html'), 'r') as f:
     html_base_file = f.read()
 
 blogs = os.listdir(blogs_folder)
-blogs = sorted(blogs, key= lambda blog: blog.split('.')[0], reverse= True)
-blog_txts = ''
+
+# List the blogs and sort them
+blogs = sorted(os.listdir(blogs_folder), key=lambda blog: blog.split('.')[0], reverse=True)
+
+print("Blogs:")
 for blog in blogs:
     print(blog)
-    with open(f"{blogs_folder}{slash}{blog}", 'r') as f:
-        # modified_date=time.strftime('%a %H:%M %B %d, %Y', time.localtime(os.path.getmtime(f"{blogs_folder}{slash}{blog}")))
-        blog_txt  = ''.join(f.readlines())
-        blog_txts = f"{blog_txts}\n{blog_txt}"
 
+# Read all blog contents into a list using a list comprehension
+blog_txt_list = [open(os.path.join(blogs_folder, blog), 'r').read() for blog in blogs]
+
+# Construct the full blog content with spacers
+spacer = '<div style="height: 50px;"></div>'
+blog_txts = f"\n{spacer}\n".join(blog_txt_list)
+
+# Replace the post placeholder with the blog contents
 html_base_file = html_base_file.replace('<!-- [POSTS PLACEHOLDER] -->', f"{blog_txts}")
 
+# Prompt user for confirmation to replace the index.html file
 instr = input('File index.html is going to be replaced, are you sure?[yN] ')
 if instr != 'y':
-    print('index.html is intact.')
+    print('index.html is kept intact.')
     sys.exit()
 else:
     print('Continuing...')
+
+# Write the combined content to index.html
 with open('index.html', 'w') as f:
     f.write(html_base_file)
-print('Done.')
 
-# for blog in blogs:
-#     with open(f"{blogs_folder}{slash}{blog}", 'r') as f:
-#         lines = f.readlines()
-#         blog_txt = ''
-#         for line in lines:
-#             line = f"<p>{line.strip()}</p>" if line.strip() else '<br>'
-#             blog_txt = f"{blog_txt}\n{line}"
-#         print(blog_txt)
+print('Done.')

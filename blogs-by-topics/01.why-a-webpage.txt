@@ -1,4 +1,4 @@
-<h2 class="w3-text-light-grey"> Why am I here?</h2>
+<h2 class="w3-text-light-grey" id="post-1"> Why am I here?</h2>
     <hr style="width:200px" class="w3-opacity">
     <p>
 	Recently, I've observed that minimalist static webpages not only possess superior aesthetics but are also markedly more efficient than their JavaScript-heavy counterparts. Following this realization, I've been eager to establish my own digital space, allowing me to express myself in a new way. To be specific, I intend to share insights that captivate my curiosity, ideas that resonate during reflections in the stillness of the night, and my to-do lists.

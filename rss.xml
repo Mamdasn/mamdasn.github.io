@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+  <title>Farhads Platz</title>
+  <link>https://farhadsplatz.de</link>
+  <description>I have made this personal website to bring what I have in mind to keyboard. I don't know in which direction in will go, and for now, the aim is not of my concern. My writings can involve philosopy, politics, science, and technology.</description>
+  <language>en-us</language>
+
+  <item>
+    <title>What old pictures have to say?</title>
+    <link>https://farhadsplatz.de/#post-4</link>
+    <description>I write about what pictures can hold within them, and how effective they can be if employed by propoganda machinery.</description>
+    <pubDate>Wed, 20 Dec 2023 15:56:00 +0100</pubDate>
+    <guid>https://farhadsplatz.de/#post-4</guid>
+  </item>
+
+  <item>
+    <title>Make your voice heard!</title>
+    <link>https://farhadsplatz.de/#post-3</link>
+    <description>I explore how I can make my voice better heard through protesting in berlin, i.e how I can be more effective with my voice.</description>
+    <pubDate>Thu, 14 Dec 2023 17:45:00 +0100</pubDate>
+    <guid>https://farhadsplatz.de/#post-3</guid>
+  </item>
+
+  <item>
+    <title>Boredom activity: gravity defying flowers</title>
+    <link>https://farhadsplatz.de/#post-2</link>
+    <description>I had a day filled with boredom and joy, so I write about an art piece I tried to create.</description>
+    <pubDate>Sun, 28 Aug 2023 11:03:00 +0200</pubDate>
+    <guid>https://farhadsplatz.de/#post-2</guid>
+  </item>
+
+  <item>
+    <title>Why am I here?</title>
+    <link>https://farhadsplatz.de/#post-1</link>
+    <description>I elaborate on why I setup this website and what I am going to be writing about in the upcoming posts.</description>
+    <pubDate>Sat, 10 Apr 2021 14:52:00 +0200</pubDate>
+    <guid>https://farhadsplatz.de/#post-1</guid>
+  </item>
+
+</channel>
+</rss>

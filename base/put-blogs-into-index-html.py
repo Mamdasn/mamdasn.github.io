@@ -1,5 +1,6 @@
 import os
 import sys
+from bs4 import BeautifulSoup
 
 blogs_folder = 'blogs-by-topics'
 
@@ -23,11 +24,25 @@ for blog in blogs:
 # Read all blog contents into a list using a list comprehension
 blog_txt_list = [open(os.path.join(blogs_folder, blog), 'r').read() for blog in blogs]
 
+# Read all blog topics and links into a list using a list comprehension
+posts_topics = [BeautifulSoup(blog, "html.parser").find('h2', {'id': True, 'class': 'w3-text-light-grey'}).get_text(strip=True) for blog in blog_txt_list]
+posts_links   = [BeautifulSoup(blog, "html.parser").find('h2', {'id': True, 'class': 'w3-text-light-grey'})['id'] for blog in blog_txt_list]
+posts_topics.reverse()
+posts_links.reverse()
+posts_topics_links_list = []
+for index, (link, topic) in enumerate(zip(posts_links, posts_topics)):
+    posts_topics_links_list.append(f"<a href='#{link}'>{index+1}. {topic}</a>")
+posts_topics_links_list.reverse()
+posts_topics_links = " || \n    ".join(posts_topics_links_list)
+
+# Replace the postslist placeholder with the blog topics/links
+html_base_file = html_base_file.replace('<!-- [POSTSLIST PLACEHOLDER] -->', f"{posts_topics_links}")
+
 # Construct the full blog content with spacers
 spacer = '<div style="height: 50px;"></div>'
 blog_txts = f"\n{spacer}\n".join(blog_txt_list)
 
-# Replace the post placeholder with the blog contents
+# Replace the posts placeholder with the blog contents
 html_base_file = html_base_file.replace('<!-- [POSTS PLACEHOLDER] -->', f"{blog_txts}")
 
 # Prompt user for confirmation to replace the index.html file

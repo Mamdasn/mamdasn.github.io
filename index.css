@@ -2,12 +2,34 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 body {
     margin: 0;
     height: 100vh;
-    background-color: #333;  /* Base color */
+    background-color: #333333;  /* Base color */
     background-image:
         linear-gradient(0deg, rgba(255,255,255,0.05) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
     background-size: 5px 5px;
 }
+
+::selection {
+    background: #666666; /* Background color */
+    color: #000000; /* Text color */
+}
+
+a:not([href="#"]):not([href="#posts"]):not([href="#contact"]):link {
+    color: #007bff;
+}
+
+a:not([href="#"]):not([href="#posts"]):not([href="#contact"]):visited {
+    color: #007bff;
+}
+
+a:not([href="#"]):not([href="#posts"]):not([href="#contact"]):hover {
+    color: #51a3fc;
+}
+
+a:not([href="#"]):not([href="#posts"]):not([href="#contact"]):active {
+    color: #51a3fc;
+}
+
 .bold-text {font-weight: bold;}
 
 .w3-row-padding img {margin-bottom: 12px}
@@ -53,5 +75,5 @@ img {
 }
 
 .tag-section {
-    color: #007bff;
+    color: #005ecc;
 }

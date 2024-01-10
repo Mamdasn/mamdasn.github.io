@@ -1,7 +1,6 @@
 body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 body {
     margin: 0;
-    height: 100vh;
     background-color: #333333;  /* Base color */
     background-image:
         linear-gradient(0deg, rgba(255,255,255,0.05) 1px, transparent 1px),
@@ -34,11 +33,37 @@ a:not([href="#"]):not([href="#posts"]):not([href="#contact"]):active {
 
 .w3-row-padding img {margin-bottom: 12px}
 
-/* Set the width of the sidebar to 120px */
-.w3-sidebar {width: 120px;background: #222;}
+.w3-sidebar {
+	width: 100px;
+	background: #151515;
+}
 
-/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
-#main {margin-left: 120px}
+#main {
+    	flex-grow: 1;
+	margin-left: 100px;
+}
+
+.bodyflexcontainer {
+	display: flex;
+}
+
+.progressbar {
+    width: 0px;
+    color: gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+}
+
+
+.progressbar span {
+    font-weight: bold;
+    transform: rotate(-90deg) scale(0.8);
+    transform-origin: left bottom;
+    white-space: nowrap;
+    opacity: 0.2;
+}
 
 /* Remove margins from "page content" on small screens */
 @media only screen and (max-width: 600px) {#main {margin-left: 0}}

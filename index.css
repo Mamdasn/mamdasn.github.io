@@ -59,14 +59,14 @@ a:not([href="#"]):not([href="#posts"]):not([href="#contact"]):active {
 
 .progressbar span {
     font-weight: bold;
-    transform: rotate(-90deg) scale(0.8);
+    transform: rotate(-90deg) scale(0.9);
     transform-origin: left bottom;
     white-space: nowrap;
-    opacity: 0.2;
+    opacity: 0.6;
 }
 
 /* Remove margins from "page content" on small screens */
-@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+@media only screen and (max-width: 600px) {#main {margin-left: 0} .progressbar span {opacity: 0.3}}
 
 img {
     max-width: 100%;

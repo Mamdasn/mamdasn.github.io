@@ -2,7 +2,7 @@ import os
 import sys
 from bs4 import BeautifulSoup
 
-blogs_folder = 'blogs-by-topics'
+blogs_folder = 'posts'
 
 # Check if the current directory is 'base' and if so, change to the parent directory
 if os.path.basename(os.getcwd()) == 'base':

@@ -1,0 +1,47 @@
+name: Setup The Webpage
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Main Branch
+        uses: actions/checkout@v3
+        with:
+          path: 'main_repo'
+
+      - name: Put blogs into the base index html file
+        run: |
+          cd main_repo
+          bash base/put-blogs-into-index-html.sh
+
+      - name: Checkout Documentation Branch
+        uses: actions/checkout@v3
+        with:
+          ref: 'INDEX'
+          path: 'INDEX_repo'
+
+      - name: Copy index html/css and the rss files into the INDEX branch
+        run: |
+          cp main_repo/index.html gh_pages_repo/
+          cp main_repo/index.css gh_pages_repo/
+          cp main_repo/rss.xml gh_pages_repo/
+
+      - name: Commit and Push Changes
+        run: |
+          cd gh_pages_repo
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add .
+          if git diff --cached --quiet; then
+              echo "No changes to commit. Skipping git push."
+          else
+              # Commit and push if there are staged changes
+              git commit -m "Update `Index files`"
+              git push origin gh-pages
+          fi

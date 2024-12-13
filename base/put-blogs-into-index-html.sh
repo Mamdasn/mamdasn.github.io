@@ -71,8 +71,6 @@ done
 # SETUP TABLE OF CONTENTS IN index.html
 CURSOR=$(grep -n '<!-- \[POSTSLIST PLACEHOLDER\] -->'  $INDEX | cut -d ':' -f1)
 
-TOPIC_LINES="$(grep '<h2 class="\S*" id="post-[0-9]*".*>.*</h2>' $INDEX)"
-
 echo "$BLOGNAMES" | while read BLOGNAME; 
 do 
     BLOGPATH="$BLOGSDIR/$BLOGNAME"

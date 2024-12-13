@@ -1,0 +1,111 @@
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+body {
+    margin: 0 auto;
+    background-color: #444444;  /* Base color */
+}
+
+.farhad-page {
+    margin: 0 auto;
+    background-color: #333333;  /* Base color */
+    background-image:
+        linear-gradient(0deg, rgba(255,255,255,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: 5px 5px;
+}
+
+@media only screen and (min-width: 1400px) {.farhad-page {width: 1400px; box-shadow: 0 0 50px rgba(0, 0, 0, 1);}}
+
+::selection {
+    background: #666666; /* Background color */
+    color: #000000; /* Text color */
+}
+
+a:not([href="#"]):not([href="#posts"]):not([href="#contact"]):link {
+    color: #007bff;
+}
+
+a:not([href="#"]):not([href="#posts"]):not([href="#contact"]):visited {
+    color: #007bff;
+}
+
+a:not([href="#"]):not([href="#posts"]):not([href="#contact"]):hover {
+    color: #51a3fc;
+}
+
+a:not([href="#"]):not([href="#posts"]):not([href="#contact"]):active {
+    color: #51a3fc;
+}
+
+.bold-text {font-weight: bold;}
+
+.w3-row-padding img {margin-bottom: 12px}
+
+.w3-sidebar {
+	width: 100px;
+	background: #151515;
+}
+
+#main {
+    	flex-grow: 1;
+	margin-left: 100px;
+}
+
+.bodyflexcontainer {
+	display: flex;
+}
+
+.progressbar {
+    width: 0px;
+    color: gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+}
+
+
+.progressbar span {
+    font-weight: bold;
+    transform: rotate(-90deg) scale(0.9);
+    transform-origin: left bottom;
+    white-space: nowrap;
+    opacity: 0.6;
+}
+
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0} .progressbar span {opacity: 0.3}}
+
+img {
+    max-width: 100%;
+    padding: 5px;
+}
+
+.bw {
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+
+.time-tag {
+  font-size: 13px;
+  text-align: right;
+}
+
+.image-profile {
+    max-width: 40%;
+}
+.image-curved-corner {
+    border-radius: 5%;
+    overflow: hidden;  /* This ensures any part of the image outside the circle isn't displayed. */
+}
+.align-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.center-div {
+    text-align: center;
+}
+
+.tag-section {
+    color: #005ecc;
+}

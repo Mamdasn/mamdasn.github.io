@@ -28,7 +28,7 @@ jobs:
 
       - name: Copy index html/css and the rss files into the INDEX branch
         run: |
-          cp main_repo/index.html main_repo/index.css main_repo/rss.xml INDEX_repo/
+          cp main_repo/index.html main_repo/rss.xml INDEX_repo/
           cp -r main_repo/assets INDEX_repo/
 
       - name: Commit and Push Changes

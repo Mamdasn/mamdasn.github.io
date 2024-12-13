@@ -41,6 +41,6 @@ jobs:
               echo "No changes to commit. Skipping git push."
           else
               # Commit and push if there are staged changes
-              git commit -m "Update `Index files`"
+              git commit -m "Update index files"
               git push origin INDEX
           fi

@@ -44,7 +44,7 @@ function get_topic_id {
 BASEINDEX='base/index-struct.html'
 INDEX='index.html'
 
-BLOGSDIR='blogs-by-topics'
+BLOGSDIR='posts'
 BLOGNAMES=$(ls $BLOGSDIR | sort -k1.1,1.2n)
 
 BASERSS='base/rss-struct.xml'

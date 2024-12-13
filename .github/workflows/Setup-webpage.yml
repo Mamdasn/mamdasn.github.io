@@ -20,7 +20,7 @@ jobs:
           cd main_repo
           bash base/put-blogs-into-index-html.sh
 
-      - name: Checkout Documentation Branch
+      - name: Checkout INDEX Branch
         uses: actions/checkout@v3
         with:
           ref: 'INDEX'
@@ -28,13 +28,11 @@ jobs:
 
       - name: Copy index html/css and the rss files into the INDEX branch
         run: |
-          cp main_repo/index.html gh_pages_repo/
-          cp main_repo/index.css gh_pages_repo/
-          cp main_repo/rss.xml gh_pages_repo/
+          cp main_repo/index.html main_repo/index.css main_repo/rss.xml INDEX_repo/
 
       - name: Commit and Push Changes
         run: |
-          cd gh_pages_repo
+          cd INDEX_repo
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
           git add .

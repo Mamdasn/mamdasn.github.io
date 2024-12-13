@@ -41,5 +41,5 @@ jobs:
           else
               # Commit and push if there are staged changes
               git commit -m "Update `Index files`"
-              git push origin gh-pages
+              git push origin INDEX
           fi

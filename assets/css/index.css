@@ -4,6 +4,16 @@ body {
     background-color: #444444;  /* Base color */
 }
 
+table {
+    margin: 20px auto;
+    border: 1px solid #000;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
 .farhad-page {
     margin: 0 auto;
     background-color: #333333;  /* Base color */
@@ -95,7 +105,7 @@ img {
 }
 .image-curved-corner {
     border-radius: 5%;
-    overflow: hidden;  /* This ensures any part of the image outside the circle isn't displayed. */
+    overflow: hidden;  
 }
 .align-center {
     display: block;

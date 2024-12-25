@@ -18,10 +18,10 @@ function get_first_paragraph {
     BLOGPATH="$1"
     [ -z "$BLOGPATH" ] && echo Please provide a path to the file && exit 1
     CURSOR="$(grep -n '<p>'  $BLOGPATH | cut -d ':' -f1)"
-    echo "$CURSOR" | while read LINE_NUM; 
+    echo "$CURSOR" | while read LINE_NUM;
     do
         FIRST_PARAGRAPH=$(sed -n "s/^[[:space:]]*//g;s/[[:space:]]*$//g;${LINE_NUM}p" "$BLOGPATH")
-        while [ ${#FIRST_PARAGRAPH} -le 3 ]; 
+        while [ ${#FIRST_PARAGRAPH} -le 3 ];
         do
             LINE_NUM=$((LINE_NUM+1))
             FIRST_PARAGRAPH=$FIRST_PARAGRAPH$(sed -n "s/^[[:space:]]*//g;s/[[:space:]]*$//g;${LINE_NUM}p" "$BLOGPATH")
@@ -50,6 +50,8 @@ BLOGNAMES=$(ls $BLOGSDIR | sort -k1.1,1.2n)
 BASERSS='base/rss-struct.xml'
 RSS='rss.xml'
 
+BASEURL='https://farhadsplatz.de'
+
 
 # INITIALIZE A FRESH index.html
 cp $BASEINDEX $INDEX
@@ -58,10 +60,10 @@ cp $BASEINDEX $INDEX
 # SETUP POSTS IN index.html
 CURSOR=$(grep -n '<!-- \[POSTS PLACEHOLDER\] -->'  $INDEX | cut -d ':' -f1)
 
-echo "$BLOGNAMES" | while read BLOGNAME; 
-do 
+echo "$BLOGNAMES" | while read BLOGNAME;
+do
     BLOGPATH="$BLOGSDIR/$BLOGNAME"
-    [ "$(echo "$BLOGNAMES" | head -1)" != "$BLOGNAME" ] &&  
+    [ "$(echo "$BLOGNAMES" | head -1)" != "$BLOGNAME" ] &&
         SPACER='<div style="height: 50px;"></div>' &&
             sed -i "${CURSOR}a\\$SPACER" $INDEX
     sed -i "${CURSOR}r $BLOGPATH" $INDEX
@@ -71,8 +73,8 @@ done
 # SETUP TABLE OF CONTENTS IN index.html
 CURSOR=$(grep -n '<!-- \[POSTSLIST PLACEHOLDER\] -->'  $INDEX | cut -d ':' -f1)
 
-echo "$BLOGNAMES" | while read BLOGNAME; 
-do 
+echo "$BLOGNAMES" | while read BLOGNAME;
+do
     BLOGPATH="$BLOGSDIR/$BLOGNAME"
     TOPIC=$(get_topic "$BLOGPATH")
     TOPIC_ID=$(get_topic_id "$BLOGPATH")
@@ -88,15 +90,15 @@ cp $BASERSS $RSS
 # SETUP RSS FEED IN rss.xml
 CURSOR=$(grep -n '<!-- \[FEED PLACEHOLDER\] -->'  $RSS | cut -d ':' -f1)
 
-echo "$BLOGNAMES" | while read BLOGNAME; 
-do 
+echo "$BLOGNAMES" | while read BLOGNAME;
+do
     BLOGPATH="$BLOGSDIR/$BLOGNAME"
     echo $BLOGPATH
     TITLE="<title>"$(get_topic "$BLOGPATH")"</title>"
-    LINK="<link>https://farhadsplatz.de/#post-"$(get_topic_id "$BLOGPATH")"</link>"
+    LINK="<link>${BASEURL}/#post-"$(get_topic_id "$BLOGPATH")"</link>"
     DESCRIPTION="<description>"$(get_first_paragraph "$BLOGPATH")"</description>"
     PUBDATE="<pubDate>"$(get_date "$BLOGPATH")"</pubDate>"
-    GUID="<guid>https://farhadsplatz.de/#post-"$(get_topic_id "$BLOGPATH")"</guid>"
+    GUID="<guid>${BASEURL}/#post-"$(get_topic_id "$BLOGPATH")"</guid>"
 
     FEED=$(printf '\t<item>\n\t\t%s\n\t\t%s\n\t\t%s\n\t\t%s\n\t\t%s\n\t</item>' "$TITLE" "$LINK" "$DESCRIPTION" "$PUBDATE" "$GUID")
     printf '%s\n\n' "$FEED" | sed -i "${CURSOR}r /dev/stdin" "$RSS"

@@ -6,7 +6,7 @@ body {
 
 table {
     margin: 20px auto;
-    border: 1px solid #000;
+    border: 0px solid #000;
 }
 
 th, td {
@@ -31,19 +31,19 @@ th, td {
 }
 
 a:not([href="#"]):not([href="#posts"]):not([href="#contact"]):link {
-    color: #007bff;
+    color: #005b80;
 }
 
 a:not([href="#"]):not([href="#posts"]):not([href="#contact"]):visited {
-    color: #007bff;
+    color: #0096d1;
 }
 
 a:not([href="#"]):not([href="#posts"]):not([href="#contact"]):hover {
-    color: #51a3fc;
+    color: #00b7ff;
 }
 
 a:not([href="#"]):not([href="#posts"]):not([href="#contact"]):active {
-    color: #51a3fc;
+    color: #007cad;
 }
 
 .bold-text {font-weight: bold;}
@@ -119,5 +119,5 @@ img {
 }
 
 .tag-section {
-    color: #005ecc;
+    color: #0096d1;
 }

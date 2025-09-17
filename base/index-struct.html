@@ -22,14 +22,10 @@
 
   window.onload = () => {
     const offset = 946684800, end = 3345062400;
-    function update() {
-      const now = Math.floor(Date.now() / 1000);
-      const progress = (now - offset) / (end - offset);
-      const g = Math.round(255 * (1 - progress));
-      document.documentElement.style.setProperty("--g", g);
-    }
-    update();
-    setInterval(update, 1000);
+    const now = Math.floor(Date.now() / 1000);
+    const progress = (now - offset) / (end - offset);
+    const g = Math.round(255 * (1 - progress));
+    document.documentElement.style.setProperty("--g", g);
   };
 </script>
 </head>

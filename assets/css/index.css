@@ -87,6 +87,7 @@ a:not([href="#"]):not([href="#posts"]):not([href="#contact"]):active {
 
 img {
     max-width: 100%;
+    height: auto;
     padding: 5px;
     border: 0;
 }

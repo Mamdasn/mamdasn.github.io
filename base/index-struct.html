@@ -19,6 +19,18 @@
   gtag('js', new Date());
 
   gtag('config', 'G-WB7814XR2S');
+
+  window.onload = () => {
+    const offset = 946684800, end = 3345062400;
+    function update() {
+      const now = Math.floor(Date.now() / 1000);
+      const progress = (now - offset) / (end - offset);
+      const g = Math.round(255 * (1 - progress));
+      document.documentElement.style.setProperty("--g", g);
+    }
+    update();
+    setInterval(update, 1000);
+  };
 </script>
 </head>
 <body>
@@ -55,8 +67,7 @@
   	<div class="w3-padding-large" id="main">
   	  <!-- Header/Home -->
   	  <header class="w3-content w3-justify w3-text-grey w3-padding-64" id="home">
-  	    <h1 class="w3-jumbo bold-text"><span class="w3-hide-small">Farhads Platz</span></h1>
-  	    <h1 class="center-div w3-jumbo bold-text"><span class="w3-hide-large w3-hide-medium">Farhad's Blog</span></h1>
+  	    <h1 class="w3-jumbo header-text"><span class="w3-hide-small">Farhads Platz</span></h1>
   	    <br><br><br>
   	    <img src="https://avatars.githubusercontent.com/u/31221828?v=4" class="image-profile image-curved-corner align-center">
   	    <div class="align-center" style="width: 80%;">

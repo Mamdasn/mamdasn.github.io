@@ -46,7 +46,10 @@ a:not([href="#"]):not([href="#posts"]):not([href="#contact"]):active {
     color: #007cad;
 }
 
-.bold-text {font-weight: bold;}
+.header-text {
+    font-weight: bold;
+    color: rgb(var(--g), var(--g), var(--g));
+}
 
 .w3-row-padding img {margin-bottom: 12px}
 

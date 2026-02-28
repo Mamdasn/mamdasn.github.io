@@ -30,19 +30,19 @@ th, td {
     color: #000000; /* Text color */
 }
 
-a:not([href="#"]):not([href="#posts"]):not([href="#contact"]):link {
+#main a:not([href="#"]):not([href="#posts"]):not([href="#contact"]):link {
     color: #005b80;
 }
 
-a:not([href="#"]):not([href="#posts"]):not([href="#contact"]):visited {
+#main a:not([href="#"]):not([href="#posts"]):not([href="#contact"]):visited {
     color: #0096d1;
 }
 
-a:not([href="#"]):not([href="#posts"]):not([href="#contact"]):hover {
+#main a:not([href="#"]):not([href="#posts"]):not([href="#contact"]):hover {
     color: #00b7ff;
 }
 
-a:not([href="#"]):not([href="#posts"]):not([href="#contact"]):active {
+#main a:not([href="#"]):not([href="#posts"]):not([href="#contact"]):active {
     color: #007cad;
 }
 

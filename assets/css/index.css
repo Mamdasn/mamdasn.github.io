@@ -30,19 +30,19 @@ th, td {
     color: #000000; /* Text color */
 }
 
-#main a:not([href="#"]):not([href="#posts"]):not([href="#contact"]):link {
+#main a:link {
     color: #005b80;
 }
 
-#main a:not([href="#"]):not([href="#posts"]):not([href="#contact"]):visited {
+#main a:visited {
     color: #0096d1;
 }
 
-#main a:not([href="#"]):not([href="#posts"]):not([href="#contact"]):hover {
+#main a:hover {
     color: #00b7ff;
 }
 
-#main a:not([href="#"]):not([href="#posts"]):not([href="#contact"]):active {
+#main a:active {
     color: #007cad;
 }
 

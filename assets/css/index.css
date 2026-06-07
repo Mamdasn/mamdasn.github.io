@@ -108,6 +108,7 @@ img {
 .image-profile {
     max-width: 30%;
 }
+@media only screen and (max-width: 600px) {.image-profile {max-width: 55%;}}
 .image-curved-corner {
     border-radius: 5%;
     overflow: hidden;

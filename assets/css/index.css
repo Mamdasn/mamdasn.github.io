@@ -51,6 +51,14 @@ th, td {
     color: rgb(var(--g), var(--g), var(--g));
 }
 
+.w3-text-grey.w3-padding-16 {
+    color: #cfcfcf !important;
+}
+
+#contact {
+    color: #cfcfcf !important;
+}
+
 .w3-row-padding img {margin-bottom: 12px}
 
 .w3-sidebar {
